@@ -1,0 +1,23 @@
+schema: '2.0'
+stages:
+  clean:
+    cmd: python src/clean.py data/raw/prix_cacao_fao_2015_2024.csv data/clean/prix_cacao_clean.csv
+      metrics/clean_metrics.json
+    deps:
+    - path: data/raw/prix_cacao_fao_2015_2024.csv
+      hash: md5
+      md5: 1f02bfe9f233378f99bbe47d3878fb4d
+      size: 44132
+    - path: src/clean.py
+      hash: md5
+      md5: 86d47a9c2649bc58b97d0f9e1cf6ce68
+      size: 844
+    outs:
+    - path: data/clean/prix_cacao_clean.csv
+      hash: md5
+      md5: 6dfd002375673d43f42c1477e9db8171
+      size: 300
+    - path: metrics/clean_metrics.json
+      hash: md5
+      md5: 15c3e084835f6217691ecb75d27870e4
+      size: 65

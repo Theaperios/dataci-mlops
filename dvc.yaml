@@ -1,0 +1,11 @@
+stages:
+  clean:
+    cmd: python src/clean.py data/raw/prix_cacao_fao_2015_2024.csv data/clean/prix_cacao_clean.csv
+      metrics/clean_metrics.json
+    deps:
+    - data/raw/prix_cacao_fao_2015_2024.csv
+    - src/clean.py
+    outs:
+    - data/clean/prix_cacao_clean.csv
+    metrics:
+    - metrics/clean_metrics.json
